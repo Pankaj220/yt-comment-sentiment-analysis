@@ -1,0 +1,6 @@
+[core]
+    remote = local_remote
+['remote "gdrive_remote"']
+    url = gdrive://12D9YDiSo-zpkdg1UbgPQVy98xQ2rxUYU
+['remote "local_remote"']
+    url = C:\Users\paswa\OneDrive\Desktop
