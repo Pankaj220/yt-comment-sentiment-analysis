@@ -1,0 +1,22 @@
+{
+    "model_name": "yt_chrome_plugin_model",
+    "model_type": "LightGBM",
+    "task": "Sentiment Analysis",
+    "dataset": "YouTube Comments",
+    "registration_timestamp": "2025-06-21T15:19:12.242197",
+    "run_id": "033eebf27edd4c5686986fd1c046761e",
+    "model_artifact_path": "runs:/033eebf27edd4c5686986fd1c046761e/model/lgbm_model.pkl",
+    "vectorizer_artifact_path": "runs:/033eebf27edd4c5686986fd1c046761e/vectorizer/tfidf_vectorizer.pkl",
+    "mlflow_tracking_uri": "https://dagshub.com/Pankaj220/yt-comment-sentiment-analysis.mlflow",
+    "experiment_name": "dvc-pipeline-runs",
+    "model_format": "pickle",
+    "status": "production_ready",
+    "version": "v2025-06-21T15-19-12-242197",
+    "description": "LightGBM model for YouTube comment sentiment analysis - DVC pipeline trained",
+    "tags": {
+        "framework": "LightGBM",
+        "preprocessing": "TF-IDF",
+        "training_pipeline": "DVC",
+        "deployment_ready": true
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "model_name": "yt_chrome_plugin_model",
+    "deployment_config": {
+        "model_run_id": "033eebf27edd4c5686986fd1c046761e",
+        "model_artifact_path": "runs:/033eebf27edd4c5686986fd1c046761e/model/lgbm_model.pkl",
+        "vectorizer_artifact_path": "runs:/033eebf27edd4c5686986fd1c046761e/vectorizer/tfidf_vectorizer.pkl",
+        "mlflow_tracking_uri": "https://dagshub.com/Pankaj220/yt-comment-sentiment-analysis.mlflow",
+        "registration_run_id": "55904d1adeb74d548728d4cd8d5af4d8"
+    },
+    "model_loading_instructions": {
+        "python_code": "# Load the model for inference\nimport mlflow\nimport pickle\n\n# Set MLflow tracking URI\nmlflow.set_tracking_uri(\"https://dagshub.com/Pankaj220/yt-comment-sentiment-analysis.mlflow\")\n\n# Method 1: Load from artifact path\nmodel_uri = \"runs:/033eebf27edd4c5686986fd1c046761e/model/lgbm_model.pkl\"\nmodel = mlflow.sklearn.load_model(model_uri)\n\n# Method 2: Load directly from run\nrun_id = \"033eebf27edd4c5686986fd1c046761e\"\nmodel_path = f\"runs:/{run_id}/model\"\n# Download and load manually if needed",
+        "curl_download": "# Download model artifacts using MLflow CLI\nmlflow artifacts download -r 033eebf27edd4c5686986fd1c046761e -d ./downloaded_model"
+    },
+    "inference_example": "# Example inference code\nvectorizer = # Load your TF-IDF vectorizer\ntext = \"This is a sample comment\"\ntext_vectorized = vectorizer.transform([text])\nprediction = model.predict(text_vectorized)"
+}
